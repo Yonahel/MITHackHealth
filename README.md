@@ -1,2 +1,2 @@
 # MITHackHealth
-Mobile App for the MITHackHealth Hackathon. 
+Project Playground Mobile App for the MITHackHealth Hackathon. 
