@@ -4,7 +4,7 @@
     android:id="@+id/nav_drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.wizzywizards.projectplayground.HomeActivity">
+    tools:context="com.wizzywizards.projectplayground.MainActivity">
 
     <FrameLayout
         android:id="@+id/content_frame"
@@ -13,14 +13,32 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/bg">
+            android:layout_height="match_parent">
+
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true">
+                android:layout_height="wrap_content">
 
+                <TextView
+                    android:id="@+id/incentives_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="My Incentives "
+                    android:gravity="right"
+                    android:textSize="48sp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"/>
+
+                <ListView
+                    android:id="@+id/incentives_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/incentives_title">
+
+
+
+                </ListView>
 
 
             </RelativeLayout>

@@ -1,6 +1,7 @@
 package com.wizzywizards.projectplayground;
 
 import android.app.Activity;
+import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
@@ -13,6 +14,11 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+
+import com.gimbal.android.Gimbal;
+import com.gimbal.logging.GimbalLogConfig;
+import com.gimbal.logging.GimbalLogLevel;
+import com.urbanairship.UAirship;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -34,6 +40,20 @@ public class MainActivity extends AppCompatActivity
         emailField = (EditText) findViewById(R.id.email_field);
         passField = (EditText) findViewById(R.id.pass_field);
 
+        /*
+        * ****************
+            GIMBAL
+         * ***************
+         *
+        */
+        Log.d(TAG, "Setting Gimbal API key");
+        Gimbal.setApiKey((Application) UAirship.getApplicationContext(), "f9e09c0c-6c1c-4e88-81a2-b1f2c96157ad");
+
+        //just for fun
+        GimbalLogConfig.setLogLevel(GimbalLogLevel.DEBUG);
+
+        Log.d(TAG, "Starting Gimbal listening");
+        GimbalAdapter.shared().start();
 
     }
 
