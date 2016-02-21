@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/kid_list_item_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_dialog_info"
+        android:layout_centerVertical="true"
+        android:paddingLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/kid_list_item_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Timmy"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:layout_toRightOf="@id/kid_list_item_icon"
+
+        />
+
+</RelativeLayout>
